@@ -1,4 +1,4 @@
-
+import { connect } from 'cloudflare:sockets';
 export default {
 
 let url = new URL(event.request.url);
