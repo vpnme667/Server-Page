@@ -1,4 +1,7 @@
 
+export default {
+addEventListener(
+   "fetch", event => {
        
        const ip = event.request.headers.get('cf-connecting-ip') || event.request.headers.get('x-forwarded-for') || (event.request.socket && event.request.socket.remoteAddress);
        let url = new URL(event.request.url);
@@ -12,3 +15,6 @@
        event.respondWith(
            fetch(request)
        )
+   }
+)
+}
