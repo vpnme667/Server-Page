@@ -1,6 +1,3 @@
-import { connect } from 'cloudflare:sockets';
-
-
 export default {
 
      /**
