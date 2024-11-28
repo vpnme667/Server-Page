@@ -1,14 +1,9 @@
 export default {
-
-    async fetch(request, env, ctx) {
-       
+    async fetch(request, env) {
                         const url = new URL(request.url);
-                        url.hostname = env.HOST || 'host.parshast.xyz';
+                        url.hostname = env.HOST || 'ictfz.ir';
                         url.protocol = 'https:';
                         request = new Request(url, request);
-                        return fetch(request);
-       
-
-              }
-        
+                        return fetch(request);      
+    }
 };
